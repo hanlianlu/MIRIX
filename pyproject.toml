@@ -30,7 +30,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Communications :: Chat",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 dependencies = [
     "pytz",
     "numpy",
@@ -39,7 +39,7 @@ dependencies = [
     "Markdown",
     "Pillow",
     "scikit-image",
-    "openai==1.72.0",
+    "openai>=1.99.0",
     "tiktoken",
     "google-genai",
     "python-dotenv",
@@ -59,8 +59,8 @@ dependencies = [
     "psutil",
     "llama_index",
     "llama-index-embeddings-google-genai",
-    "fastapi==0.104.1",
-    "uvicorn[standard]==0.24.0",
+    "fastapi>=0.104.1",
+    "uvicorn[standard]>=0.24.0",
     "pydub",
     "python-multipart",
     "opentelemetry-api",

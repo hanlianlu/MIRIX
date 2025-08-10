@@ -1,6 +1,14 @@
-from typing import List, Optional
+from typing import List, Optional, TYPE_CHECKING
 
-from openai.types.chat.chat_completion_message_tool_call import ChatCompletionMessageToolCall as OpenAIToolCall
+if TYPE_CHECKING:
+    from mirix.orm.agent import Agent
+    from mirix.orm.organization import Organization
+    from mirix.orm.step import Step
+
+from openai.types.chat.chat_completion_message_function_tool_call import (
+    ChatCompletionMessageFunctionToolCall as OpenAIToolCall,
+    Function as OpenAIFunction,
+)
 from sqlalchemy import BigInteger, FetchedValue, ForeignKey, Index, event, text
 from sqlalchemy.orm import Mapped, Session, mapped_column, relationship
 

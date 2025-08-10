@@ -3,8 +3,10 @@ from typing import Any, Dict, List, Optional, Union
 
 import numpy as np
 from anthropic.types.beta.messages import BetaMessageBatch, BetaMessageBatchIndividualResponse
-from openai.types.chat.chat_completion_message_tool_call import ChatCompletionMessageToolCall as OpenAIToolCall
-from openai.types.chat.chat_completion_message_tool_call import Function as OpenAIFunction
+from openai.types.chat.chat_completion_message_function_tool_call import (
+    ChatCompletionMessageFunctionToolCall as OpenAIToolCall,
+    Function as OpenAIFunction,
+)
 from sqlalchemy import Dialect
 
 from mirix.schemas.agent import AgentStepState

@@ -8,8 +8,10 @@ from collections import OrderedDict
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Literal, Optional, Union
 
-from openai.types.chat.chat_completion_message_tool_call import ChatCompletionMessageToolCall as OpenAIToolCall
-from openai.types.chat.chat_completion_message_tool_call import Function as OpenAIFunction
+from openai.types.chat.chat_completion_message_function_tool_call import (
+    ChatCompletionMessageFunctionToolCall as OpenAIToolCall,
+    Function as OpenAIFunction,
+)
 from pydantic import BaseModel, Field, field_validator
 
 from mirix.constants import DEFAULT_MESSAGE_TOOL, DEFAULT_MESSAGE_TOOL_KWARG, TOOL_CALL_ID_MAX_LEN
